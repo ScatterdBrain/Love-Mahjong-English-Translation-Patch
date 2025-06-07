@@ -5,7 +5,7 @@ Patch is in xdelta format and was tested with MD5: cd2add33801946aad2d61cdeff9e8
 Tools used: \
 [QuickBMS](https://aluigi.altervista.org/quickbms.htm) - decompressing lzss and compressing it back. \
 [MKPSXISO](https://github.com/Lameguy64/mkpsxiso) - extracting and rebuilding bin image. \
-[Delta Patcher](https://www.romhacking.net/utilities/704/) - creating patch file. \
+[Delta Patcher](https://github.com/marco-calautti/DeltaPatcher) - creating patch file. \
 ![WIP1](screenshots/Dialogue.png)
 ![WIP2](screenshots/Mahjong_Menu.png)
 ![WIP3](screenshots/Reward.png)
