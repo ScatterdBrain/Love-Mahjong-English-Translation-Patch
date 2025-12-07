@@ -1,0 +1,17 @@
+# HEP image format specifications
+
+little endian
+
+Header 32 bytes
+	4 bytes - signature # "HEP\x00"
+	4 bytes - file size in bytes
+	4 bytes - unknown # image ID?
+	4 bytes - unknown # usually 5 or 6
+	4 bytes - color type # 0 - 32bpp R8G8B8A8, 2 - 16bpp R5G5B5A1, 16 - 8bpp indexed, 32 - 4bpp indexed
+	4 bytes - image width
+	4 bytes - image height
+	4 bytes - unknown
+
+Image
+	X bytes - pixel data # X = ((width * height * bpp) >> 3)
+	X bytes - color table # X = 1024 for 8bpp indexed, 64 for 4bpp indexed
