@@ -27,10 +27,42 @@
 フォ一マット中です。リトライしますか?
 よろしいですか?
 はい
-いいえ";
-"SPRITE/BONUSP";"00000019_j-0000001d_j";"国士無双";
+いいえ";"There is no memory card (PS2) in memory card slot 1.
+To save a memory card with at least 113 KB is required.
+Please insert memory card with existing data.
+Memory card (PS2) is unformated.
+Memory card (PS2) might be corupted.
+Please insert memory card with enough free space.
+Memory card (PS2) is unformated.
+Now checking memory card (PS2).
+Do not remove memory cards.
+Do you want to format?
+Not enough free space.
+Start game anyway?
+There is no data.
+Failed to load.
+Failed to save.
+Saved succesfully.
+Formating failed.
+Save current progress.
+Loading succesfull.
+Data already exist.
+Cancel saving?
+Load the data.
+Overwrite data?
+Saving.
+Loading.
+Formatted. Try again?
+Are you sure?
+Yes
+No"
+"SPRITE/BONUSP";"00000019_j-0000001d_j";"国士無双";"Peerless Champion
+NOTE: It's a name of ""thirteen orphans"" yaku which
+actually translates to something like ""undefeated national warrior/hero"".
+In the context of the image, I think, it's meant as Riho boasting about her mahjong skills.)"
 "SPRITE/SCRFONT";"00000002_j";"カメラを手に入れた
-罰ゲームで写真を撮ることが可能になった";
+罰ゲームで写真を撮ることが可能になった";"Camera acquired
+Now you can take pictures during penalty game"
 "SPRITE/SCRFONT";"00000003_j";"体操服その2, 体操服その3が選択可能になつた
 制服その1が選択可能になつた
 水着その1が選択可能になつた
@@ -40,11 +72,22 @@
 私服その2, 私服その3が選択可能になった
 制服その2, 制服その3が選択可能になった
 スクール水着その2, スクール水着その3が選択可能になった
-水着その2, 水着その3が選択可能になった";
+水着その2, 水着その3が選択可能になった";"Unlocked Gym Uniform 2 and 3
+Unlocked School Uniform 1
+Unlocked Bikini 1
+Unlocked Gym Uniform 1
+Unlocked Swimsuit 1
+Unlocked Stage Select
+Unlocked Casual Wear 2 and 3
+Unlocked School Uniform 2 and 3
+Unlocked Swimsuit 2 and 3
+Unlocked Bikini 2 and 3"
 "SPRITE\SPCOMMON";"00000003_j";"STARTボタンをおしてね
-STARTボタンをおしてね";
+STARTボタンをおしてね";"Press START button
+Press START button"
 "SPRITE\SPCOMMON";"00000004_j";"なうろ一でいんぐ
-なうろ一でいんぐ";
+なうろ一でいんぐ";"Now Loading
+Now Loading"
 "SPRITE\SPCOMMON";"00000005_j";"次へ
 キャンセル
 移動
@@ -66,9 +109,31 @@ Pts
 操作表示オフ
 左ステイック
 ズ一ムイン
-ズ一ムアウト";
-"SPRITE\SPCSSEL";"00000005_j";"服は何がいいかな?";
-"SPRITE\SPCSSEL";"00000006_j";"コスチュームセレクト";
+ズ一ムアウト";"Next
+Cancel
+Move
+Buy
+Return
+Page
+Left
+Pts
+Select
+Delete
+No.
+Direction
+Confirm
+Photo
+Tile Swap
+/ 0 1 2 3 4 5 6 7 8 9
+Show Controls
+Right Stick
+Hide Controls
+Left Stick
+Zoom In
+Zoom Out
+"
+"SPRITE\SPCSSEL";"00000005_j";"服は何がいいかな?";"Select Costume"
+"SPRITE\SPCSSEL";"00000006_j";"コスチュームセレクト";"Costumes"
 "SPRITE\SPCSSEL";"00000007_j";"制服その1
 制服その2
 制服その3
@@ -83,7 +148,21 @@ Pts
 水着その3
 私服その1
 私服その2
-私服その3";
+私服その3";"School Uniform 1
+School Uniform 2
+School Uniform 3
+Gym Uniform 1
+Gym Uniform 2
+Gym Uniform 3
+Swimsuit 1
+Swimsuit 2
+Swimsuit 3
+Bikini 1
+Bikini 2
+Bikini 3
+Casual Wear 1
+Casual Wear 2
+Casual Wear 3"
 "SPRITE\SPGALLA0";"00000000_j";"罰グ一ムを選んでね";
 "SPRITE\SPGALLA0";"00000001_j";"腕立て
 ストレッチ
@@ -329,20 +408,37 @@ ON
 『フローラのTea party』
 vocal:YUKO GOTO
 lyrics:MOMO
-music:Y. TAGAYA";
+music:Y. TAGAYA";"Cast
+Riho Futaba: Yuko Goto
+Insert song
+""Flora's Tea Party""
+Vocal: YUKO GOTO
+Lyrics: MOMO
+Music: Y. TAGAYA"
 "SPRITE\SPSTAFF";"00000005_j-00000009_j";"プロデューサー
 岡島 信幸
 アシスタントプロデューサー
-字原 直似";
+字原 直似";"Producer
+Nobuyuki Okajima
+Assistant Producer
+Azahara Naoi"
 "SPRITE\SPSTAFF";"0000000a_j-0000000e_j";"開発
 ヒューネックス株式会社
 『SIMPLE2000シリーズ Ultimate Vol. 5
 ラブ★マージャン！』開発チーム
 ディレクター
-菎西 倫明
+ 葛西 倫明
 プログラム
 大村 直人
-金子 登茂洋";
+金子 登茂洋";"Developed by
+HuneX Co., Ltd.
+""SIMPLE 2000 Series Ultimate Vol. 5
+Love ★ Mahjong!"" Development Team
+Director
+Tomoaki Kasai
+Programming
+Naoto Omura
+Tomohiro Kaneko"
 "SPRITE\SPSTAFF";"0000000f_j-00000013_j";"グラフィック
 高野 淳
 井波 慎一
@@ -350,42 +446,79 @@ music:Y. TAGAYA";
 サウンド
 多賀谷 洋子
 制作管理
-脇本 薄道
-大沢 知巳";
+脇本 博道
+大沢 知巳";"Graphics
+Jun Takano
+Shinichi Inami
+Natsuki Kato
+Sound
+Yoko Tagaya
+Production Management
+Hiromichi Wakimoto
+Tomomi Osawa"
 "SPRITE\SPSTAFF";"00000014_j-00000018_j";"キャスティング協力
 株式会ネ青二プロダクション
 角 康昭
 収録スタジオ
 Amten studio
 音声データ
-大田 雄一";
+大田 雄一";"Casting Cooperation
+Aoni Production Co. Ltd.
+Yasuaki Kado
+Recording Studio
+Amten studio
+Audio Data
+Yuichi Ota"
 "SPRITE\SPSTAFF";"00000019_j-0000001d_j";"『双葉 理保』
 キャラクターデザイン
 きみづか葵
-一『Love Songs アイドルはクラスメ~ト』より一";
+一『Love Songs アイドルはクラスメ~ト』より一";"Character Design of ""Riho Futaba""
+from ""Love Songs: Idol ga Classmate""
+
+Aoi Kimizuka"
 "SPRITE\SPSTAFF";"0000001e_j-00000022_j";"制作プロデューサー
 水口 誠
 スペシャルアドバイザー
-有泉 富三彦";
+有泉 富三彦";"Production Producer
+Makoto Minakuchi
+Special Advisor
+Fumihiko Ariizumi"
 "SPRITE\SPSTAFF";"00000023_j-00000027_j";"マ一ケティング
 小島 義
 佐藤 実也子
-エロロイ カ伸也
+エロロイカ 伸也
 スペシャルサンクス
 齋藤 大成
 松木 靖則
-スティンガーなんちやん
+スティンガーなんちゃん
 飯高 慎也
 城田 雄一郎
-前田 柱代子";
+前田 桂代子";"Marketing
+Tadashi Kojima
+Miyako Sato
+Eroroika Takagi
+Special Thanks
+Taisei Saito
+Yasunori Matsuki
+Stinger Nanchan
+Shinya Iitaka
+Yuichiro Shirota
+Kayoko Maeda"
 "SPRITE\SPSTAFF";"00000028_j-0000002c_j";"ファルコンチーム代表
 小澤 セイタロウ
 グゼクティヴアドバイザー
-北本 宇宙";
+北本 宇宙";"Falcon Team Representative
+Seitaro Ozawa
+Executive Advisor
+Cosmo Kitamoto"
 "SPRITE\SPSTAFF";"0000002d_j-00000031_j";"エグゼクティヴプロデューサー
-伊藤 裕二";
+伊藤 裕二";"Executive Producer
+Yuji Ito"
 "SPRITE\SPSTAFF";"00000032_j-00000036_j";"ヒューネックス株式会社
-株式会社ディースリー・パブリッシャー";
+株式会社ディースリー・パブリッシャー";"HuneX Co., Ltd.
+D3Publisher Inc.
+English Translation Patch by
+ScatterBrain"
 "SPRITE\SPSTSEL";"00000000_j";"何処で麻雀するの?";
 "SPRITE\SPSTSEL";"00000001_j";"ステ一ヅセレクト";
 "SPRITE\SPSTSEL";"00000002_j";"ビ一チ
