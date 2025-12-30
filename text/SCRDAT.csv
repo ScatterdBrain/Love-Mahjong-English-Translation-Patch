@@ -1,43 +1,66 @@
 "block";"j_text";"e_text"
 "00";"初めまして。
-キミがわたしの相手だね。";"Nice to meet you. I'll be your opponent."
+キミがわたしの相手だね。";"Nice to meet you.
+I'll be your opponent."
 "00";"こんなところで麻雀って
-したことないでしょ？";"It's your first time playing here, right?"
+したことないでしょ？";"It's your first time playing here,
+right?"
 "00";"わたしに勝つといいことがあるから
 がんばってね。
-それじゃ、始めるよ。";"Beat me and you'll get something nice.Well, let's begin."
+それじゃ、始めるよ。";"Beat me and you'll get
+something nice.
+Well, let's begin."
 "01";"さてさて、２回目はわたしの通っている
-学校の教室だよ。";"Now, the second round is in a classroom at my school."
+学校の教室だよ。";"Now, the second round
+is in a classroom at my school."
 "01";"いつもここで勉強してるんだ。
 こんなところで麻雀するのって
-なんか変な感じだね。";"Kind of crazy to play mahjong in a place where I go to study."
-"01";"さぁ、そろそろ始めよっか。";"Now, let's get started."
+なんか変な感じだね。";"Kind of crazy
+to play mahjong in a place
+where I go to study."
+"01";"さぁ、そろそろ始めよっか。";"Okay, let's get started."
 "02";"勝負もちょうど真中だね。
 このグラウンドでいつも体育を
-してるんだよ。";"We halfway there. This is where I do P.E."
+してるんだよ。";"We halfway there.
+This is where I do P.E."
 "02";"いつものように体操服を着てみたけど
-ちょっと恥ずかしい・・・かな。";"I wonder if wearing my gym uniform was a good idea..."
-"02";"早く、３回目始めようよ。";"Hurry up, let's do the third round already."
+ちょっと恥ずかしい・・・かな。";"I wonder if wearing my
+gym uniform was a good idea..."
+"02";"早く、３回目始めようよ。";"Hurry up,
+let's do the third round already."
 "03";"うーん、プールだからって
 スクール水着を着るのってどうなのかな。
-普通の水着より恥ずかしいよー。";"Hmm, should I really wear this just because we're at the swimming pool?"
+普通の水着より恥ずかしいよー。";"Hmm, should I really wear this
+just because we're at
+the swimming pool?"
 "03";"やっぱりいつもの水着ってだめ？
-うー・・・・がんばります。";"I'd rather have my bikini on... Ugh, pull yourself together."
+うー・・・・がんばります。";"I'd rather have my bikini on...
+Ugh, pull yourself together."
 "03";"勝って、すぐ終わらせちゃうからね。
-じゃ、スタート。";"Right! I'll win and be done with it. Ready? Start!"
+じゃ、スタート。";"Right!
+I'll win and be done with it.
+Ready? Start!"
 "04";"最後はわたしの部屋でーす。
-でも、なんでわたしの部屋？";"Finally, my room. You must be wondering why we're here?"
+でも、なんでわたしの部屋？";"Finally, my room.
+You must be wondering
+why we're here?"
 "04";"ま、ここまでがんばったキミへの
-ご褒美ってことにしておこうね。";"Well, let's just say you earned it for getting this far."
+ご褒美ってことにしておこうね。";"Well, let's just say you earned it
+for getting this far."
 "04";"それじゃ、ラストいくよー！";"Come on, last round!"
 "05";"負けちゃった～。
 わたしが負けるとね、罰ゲームをする事に
-なってるんだよ。";"I lost... If I lose, I have to do a penalty game."
+なってるんだよ。";"I've lost...
+If I lose, I have to do
+a penalty game."
 "05";"罰ゲームは君が選べるから
-好きなものをえらんでね";"You can choose what you'd like me to do."
+好きなものをえらんでね";"You can choose what
+you'd like me to do."
 "05";"残念だったね。
 でも、まだ挑戦できるよ。
-もう１回する？";"That's a shame. But you can try again. How about one more?"
+もう１回する？";"That's a shame.
+But you can try again.
+How about one more?"
 "05";"挑戦する";"Retry"
 "05";"降参する";"Give Up"
 "05";"そうそう。
@@ -46,51 +69,69 @@
 ウフフ。";"I'll win again. Hehehe."
 "05";"えー。
 もうちょっとかんばろーよー。
-しょうがないなぁ。";"Eh. Put up more of a fight next time."
+しょうがないなぁ。";"Eh.
+Put up more of a fight next time."
 "05";"じゃ、またやろうね。";"Well, let's play again later."
 "05";"疲れちゃった？
 そうなんだ。";"Are you tired? I see."
 "05";"もう少し遊びたかったけど・・・
 じゃ、またやろうね。
-ばいばい。";"I wanted to play a little longer... Ok, see ya. Bye bye."
+ばいばい。";"I wanted to play a little longer...
+Okay, see ya.
+Bye bye."
 "06";"おめでとう！";"Congratulations!"
 "07";"こんなところで麻雀なんて
-めったにできないよね。";"Not often you get to play mahjong in a place like this."
+めったにできないよね。";"Not often you get to play mahjong
+in a place like this."
 "07";"じゃ、やろうっか。";"Let's do it then."
 "08";"勉強するところで麻雀って
-なんかドキドキするね。";"Playing mahjong at school is kinda thrilling."
+なんかドキドキするね。";"Playing mahjong at school
+is kinda thrilling."
 "08";"見つからないうちに
 早くはじめようか。
-ウフフ。";"Let's begin before we get caught. Hehehe."
+ウフフ。";"Let's begin before we get caught.
+Hehehe."
 "09";"ここってわたしのホームグラウンドと
 いうことになるのかな。";"You on my home ground."
 "09";"じゃ、負けられないね。
-がんばろうっと。";"Good luck. May the best one win."
+がんばろうっと。";"Good luck.
+May the best one win."
 "10";"こんな広いところでするのって
-あまりないよね。";"We right in the middle of an empty field."
+あまりないよね。";"We right in the middle of
+an empty field."
 "10";"ちょっと落ち着かないかな。
-でも勝負！";"It makes me feel a bit nervous, but still it's a showdown!"
+でも勝負！";"It makes me feel a bit nervous,
+but still it's showdown!"
 "11";"麻雀もいいけど、近くに水があると
-泳ぎたくなるね。";"Mahjong is fun, but when near water, I want to take a swim."
+泳ぎたくなるね。";"Mahjong is fun, but when near water,
+I want to take a swim."
 "11";"早くやって、その後泳ご。";"Let's finish this and go for a dip."
 "12";"ふえ～ん。
 負けちゃった～。";"Eeh. I lost."
 "12";"私って弱いんだよね。きっと。
-しょうがない、罰ゲームしまーす。";"I guess I'm just no good. Well, penalty game it is."
+しょうがない、罰ゲームしまーす。";"I guess I'm just no good.
+Well, penalty game it is."
 "12";"もうちょっと手加減するとか～、
 そういう思いやりがほしいなぁ
-なんて思ったり・・・";"I just wish you'd go easy on me or be more gentle..."
+なんて思ったり・・・";"I just wish you'd go easy on me
+or be more gentle..."
 "12";"うそうそ。
-じゃ、罰ゲームいってみよう。";"Just kidding. Pick what you'd like me to do."
+じゃ、罰ゲームいってみよう。";"Just kidding.
+Pick what you'd like me to do."
 "12";"どう？
 私だってやるときはやるんだよ。
-感心した？";"How's that? I can do it when I want to. Are you impressed?"
+感心した？";"How's that?
+I can do it when I want to. 
+Are you impressed?"
 "12";"まだまだ、時間あるみたい。
-もう１回する？";"Looks like we still have time. How about one more?"
+もう１回する？";"Looks like we still have time.
+How about one more?"
 "12";"へへーん。どう？まいった？
 もう１回相手してあげてもいいよ。
-なんてね。";"Hehe. Didn't expect this? Did ya? I'll take you anytime."
-"12";"で、どうする？";"So what do you say?"
+なんてね。";"Hehe.
+Didn't expect this? Did ya?
+I'll take you anytime."
+"12";"で、どうする？";"So, what do you say?"
 "12";"挑戦する";"Retry"
 "12";"降参する";"Give Up"
 "12";"そうそう。
@@ -99,25 +140,34 @@
 ウフフ。";"I'll win again. Hehehe."
 "12";"えー。
 もうちょっとがんばろーよー。
-しょうがないなぁ。";"Eh. Put up more of a fight next time."
+しょうがないなぁ。";"Eh.
+Put up more of a fight next time."
 "12";"じゃ、またやろうね。";"Well, let's play again later."
 "12";"疲れちゃった？
 そうなんだ。";"Are you tired? I see."
 "12";"もう少し遊びたかったけど・・・
 じゃ、またやろうね。
-ばいばい。";"I wanted to play a little longer... Ok, see ya. Bye bye."
+ばいばい。";"I wanted to play a little longer...
+Okay, see ya.
+Bye bye."
 "13";"キミって麻雀強いんだね。
-ハンデほしいなぁ。";"You must be pretty confident to play with a handicap."
+ハンデほしいなぁ。";"You must be pretty confident
+to play with a handicap."
 "13";"あ、じゃあキミがあがることが出来る役を
 決めてもいい？
-勝ったらごほうびあげるからね。";"Oh, decided which yaku you go for? I'll give you a prize if you manage to get it."
-"13";"じゃ、そういうことで始めよう！";"So, let's see what you can do"
+勝ったらごほうびあげるからね。";"Oh, decided which yaku you go for?
+I'll give you a prize
+if you manage to get it."
+"13";"じゃ、そういうことで始めよう！";"So, let's see what you can do!"
 "14";"じゃ、プレゼント、
-あとでゆっくり見てね。";"Ok, here's your prize, take a look at it later."
+あとでゆっくり見てね。";"Okay, here's your prize,
+take a look at it later."
 "14";"それじゃ、次行ってみよう。";"Well then, let's try another one."
 "14";"残念だったね。
 でも、まだ挑戦できるよ。
-もう１回する？";"That's a shame. But you can try again. How about one more?"
+もう１回する？";"That's a shame.
+But you can try again.
+How about one more?"
 "14";"挑戦する";"Retry"
 "14";"降参する";"Give Up"
 "14";"そうそう。
@@ -126,19 +176,25 @@
 ウフフ。";"I'll win again. Hehehe."
 "14";"えー。
 もうちょっとがんばろーよー。
-しょうがないなぁ。";"Eh. Put up more of a fight next time."
+しょうがないなぁ。";"Eh.
+Put up more of a fight next time."
 "14";"じゃ、またやろうね。";"Well, let's play again later."
 "14";"疲れちゃった？
 そうなんだ。";"Are you tired? I see."
 "14";"もう少し遊びたかったけど・・・
 じゃ、またやろうね。
-ばいばい。";"I wanted to play a little longer... Ok, see ya. Bye bye."
+ばいばい。";"I wanted to play a little longer...
+Okay, see ya.
+Bye bye."
 "15";"負けちゃった・・・
-もう一枚あげる。";"I lost again... Here's another prize."
-"15";"次は勝つよ。";"I'll beat you next time."
+もう一枚あげる。";"I lost again...
+Here's another prize."
+"15";"次は勝つよ。";"I'll get you next time."
 "15";"残念だったね。
 でも、まだ挑戦できるよ。
-もう１回する？";"That's a shame. But you can try again. How about one more?"
+もう１回する？";"That's a shame.
+But you can try again.
+How about one more?"
 "15";"挑戦する";"Retry"
 "15";"降参する";"Give Up"
 "15";"そうそう。
@@ -147,19 +203,25 @@
 ウフフ。";"I'll win again. Hehehe."
 "15";"えー。
 もうちょっとがんばろーよー。
-しょうがないなぁ。";"Eh. Put up more of a fight next time."
+しょうがないなぁ。";"Eh.
+Put up more of a fight next time."
 "15";"じゃ、またやろうね。";"Well, let's play again later."
 "15";"疲れちゃった？
 そうなんだ。";"Are you tired? I see."
 "15";"もう少し遊びたかったけど・・・
 じゃ、またやろうね。
-ばいばい。";"I wanted to play a little longer... Ok, see ya. Bye bye."
+ばいばい。";"I wanted to play a little longer...
+Okay, see ya.
+Bye bye."
 "16";"これでも負けるの？
-はい、あげる。";"Which should I give you? Right, this one."
+はい、あげる。";"Which should I give you?
+Right, this one."
 "16";"じゃ、次でどうだ。";"Well, see you later."
 "16";"残念だったね。
 でも、まだ挑戦できるよ。
-もう１回する？";"That's a shame. But you can try again. How about one more?"
+もう１回する？";"That's a shame.
+But you can try again.
+How about one more?"
 "16";"挑戦する";"Retry"
 "16";"降参する";"Give Up"
 "16";"そうそう。
@@ -168,23 +230,31 @@
 ウフフ。";"I'll win again. Hehehe."
 "16";"えー。
 もうちょっとがんばろーよー。
-しょうがないなぁ。";"Eh. Put up more of a fight next time."
+しょうがないなぁ。";"Eh.
+Put up more of a fight next time."
 "16";"じゃ、またやろうね。";"Well, let's play again later."
 "16";"疲れちゃった？
 そうなんだ。";"Are you tired? I see."
 "16";"もう少し遊びたかったけど・・・
 じゃ、またやろうね。
-ばいばい。";"I wanted to play a little longer... Ok, see ya. Bye bye."
+ばいばい。";"I wanted to play a little longer...
+Okay, see ya.
+Bye bye."
 "17";"もう降参。
-写真もこれで最後だよ。";"That's it. This is the last picture."
+写真もこれで最後だよ。";"That's it.
+This is the last picture."
 "17";"キミって、麻雀強いんだね。
 もう私からは教えることは何もない。
-って、教えてないけどね。";"You are a truly amazing mahjong player. I'm imressed."
+って、教えてないけどね。";"You are a truly amazing mahjong player.
+I'm imressed."
 "17";"またやろうね。
-バイバイ。";"Let's have more fun again later. Bye bye."
+バイバイ。";"Let's have more fun again later.
+Bye bye."
 "17";"残念だったね。
 でも、まだ挑戦できるよ。
-もう１回する？";"That's a shame. But you can try again. How about one more?"
+もう１回する？";"That's a shame.
+But you can try again.
+How about one more?"
 "17";"挑戦する";"Retry"
 "17";"降参する";"Give Up"
 "17";"そうそう。
@@ -193,21 +263,28 @@
 ウフフ。";"I'll win again. Hehehe."
 "17";"えー。
 もうちょっとがんばろーよー。
-しょうがないなぁ。";"Eh. Put up more of a fight next time."
+しょうがないなぁ。";"Eh.
+Put up more of a fight next time."
 "17";"じゃ、またやろうね。";"Well, let's play again later."
 "17";"疲れちゃった？
 そうなんだ。";"Are you tired? I see."
 "17";"もう少し遊びたかったけど・・・
 じゃ、またやろうね。
-ばいばい。";"I wanted to play a little longer... Ok, see ya. Bye bye."
+ばいばい。";"I wanted to play a little longer...
+Okay, see ya.
+Bye bye."
 "18";"キミって、麻雀強いんだね。
 もう私からは教えることは何もない。
-って、教えてないけどね。";"You are a truly amazing mahjong player. I'm imressed."
+って、教えてないけどね。";"You are a truly amazing mahjong player.
+I'm imressed."
 "18";"またやろうね。
-バイバイ。";"Let's have more fun again later. Bye bye."
+バイバイ。";"Let's have more fun again later.
+Bye bye."
 "18";"残念だったね。
 でも、まだ挑戦できるよ。
-もう１回する？";"That's a shame. But you can try again. How about one more?"
+もう１回する？";"That's a shame.
+But you can try again.
+How about one more?"
 "18";"挑戦する";"Retry"
 "18";"降参する";"Give Up"
 "18";"そうそう。
@@ -216,10 +293,13 @@
 ウフフ。";"I'll win again. Hehehe."
 "18";"えー。
 もうちょっとがんばろーよー。
-しょうがないなぁ。";"Eh. Put up more of a fight next time."
+しょうがないなぁ。";"Eh.
+Put up more of a fight next time."
 "18";"じゃ、またやろうね。";"Well, let's play again later."
 "18";"疲れちゃった？
 そうなんだ。";"Are you tired? I see."
 "18";"もう少し遊びたかったけど・・・
 じゃ、またやろうね。
-ばいばい。";"I wanted to play a little longer... Ok, see ya. Bye bye."
+ばいばい。";"I wanted to play a little longer...
+Okay, see ya.
+Bye bye."
