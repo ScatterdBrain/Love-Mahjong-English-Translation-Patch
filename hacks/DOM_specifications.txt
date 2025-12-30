@@ -1,0 +1,47 @@
+# DOM 3D model format specification
+# I'm not a 3d modeler so it would be sparse
+
+little endian
+
+Header 32 bytes
+	4 bytes - signature # "DOM\x00"
+	4 bytes - offset to mem alloc/align values?
+	4 bytes - offset to models
+	4 bytes - offset to textures
+	4 bytes - offset to bones?
+	4 bytes - offset to bones?
+	4 bytes - offset to animations?
+	4 bytes - offset to idle animation?
+
+# DOM file can contain multiple models and each model might be divided into multiple vertex groups.
+
+Model data header
+	4 bytes - model size # << 2 to get size in bytes
+	4 bytes - number of vertex groups
+	4 bytes - unknown
+	4 bytes - unknown
+	16 bytes - 44000000000000000000000000000000 # start of vertex data
+
+Vertex data header
+	4 bytes - vertex group size # << 2 to get TOTAL size in bytes
+	4 bytes - number of vertices
+	4 bytes - related to faces # details bellow
+	4 bytes - id number of a vertex group
+# face value will be one of this values (1B, 4B, 5B, 1C, 4C, 5C). I don't really know what 1, 4 or 5 do but depending on if it B or C faces would need to be assigned differently.
+# B: f 1 2 3, f 4 5 6, f 7 8 9, etc.
+# C: f 1 2 3, f 2 4 3, f 3 4 5, f 4 6 5, etc.
+
+Vertex data
+	X(vertex group size) bytes - vertices # each vertex is four floats xyzw
+	X(vertex group size) bytes - vertex normals
+	X(vertex group size) bytes - texture coordinates
+	X(vertex group size) bytes - unknown # brightness or specular?
+
+Textures header
+	4 bytes - number of textures
+	12 bytes - 00
+
+Texture data
+# Textures are just HEP images
+
+# For the rest I haven't dug far enough.
