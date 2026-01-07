@@ -163,7 +163,7 @@ Bikini 3
 Casual Wear 1
 Casual Wear 2
 Casual Wear 3"
-"SPRITE\SPGALLA0";"00000000_j";"罰グ一ムを選んでね";
+"SPRITE\SPGALLA0";"00000000_j";"罰グ一ムを選んでね";"Select Penalty"
 "SPRITE\SPGALLA0";"00000001_j";"腕立て
 ストレッチ
 腹筋
@@ -184,20 +184,45 @@ Casual Wear 3"
 スクワット
 上体反らし
 バック転
-体操";
-"SPRITE\SPGALLA0";"00000002_j";"罰ゲーム中！";
-"SPRITE\SPGALLA1";"00000000_j";"ギャラリーだよ";
-"SPRITE\SPGALLA1";"00000001_j";"ギャラリー";
-"SPRITE\SPGALLA1";"00000002_j";"罰ゲームセレクト";
+体操";"Push-ups
+Stretching
+Sit-ups
+Jumping Jacks
+High Knees
+Handstand
+Squats
+Backbend
+Backflip
+Calisthenics
+?
+Push-ups
+Stretching
+Sit-ups
+Jumping Jacks
+High Knees
+Handstand
+Squats
+Backbend
+Backflip
+Calisthenics"
+"SPRITE\SPGALLA0";"00000002_j";"罰ゲーム中！";"Penalty Game!"
+"SPRITE\SPGALLA1";"00000000_j";"ギャラリーだよ";"The Gallery"
+"SPRITE\SPGALLA1";"00000001_j";"ギャラリー";"Gallery"
+"SPRITE\SPGALLA1";"00000002_j";"罰ゲームセレクト";"Penalties"
 "SPRITE\SPGALLA1";"00000003_j";"罰ゲーム
 ボ一ナスピクチャー
-フォト";
+フォト";"Penalty Games
+Bonus Pictures
+Photos"
 "SPRITE\SPGALLA1";"00000019_j";"このフォトを消去します
 よろしいですか?
 はい
-いいえ";
-"SPRITE\SPHDSEL";"00000000_j";"問題を選んでね";
-"SPRITE\SPHDSEL";"00000001_j";"ハンデ戦モード";
+いいえ";"Delete this photo.
+Are you sure?
+Yes
+No"
+"SPRITE\SPHDSEL";"00000000_j";"問題を選んでね";"Select Yaku"
+"SPRITE\SPHDSEL";"00000001_j";"ハンデ戦モード";"Handicap Mode"
 "SPRITE\SPHDSEL";"00000002_j";"立直
 ツモ
 ドラ
@@ -212,8 +237,22 @@ Casual Wear 3"
 大三元
 断么九
 平和
-国士無双";
-"SPRITE\SPHDSEL";"00000003_j";"済";
+国士無双";"Riichi
+Tsumo
+Dora
+4 Concealed Triplets
+Three Color Straight
+Seven Pairs
+Half Flush
+Full Flush
+3 Concealed Triplets
+Single Identical Sequences
+All Triplets
+Big Three Dragons
+All Simples
+No-points hand
+Thirteen Orphans"
+"SPRITE\SPHDSEL";"00000003_j";"済";"Done"
 "SPRITE\SPHDSEL";"00000004_j";"この対局は
 立直
 ツモ
@@ -230,7 +269,23 @@ Casual Wear 3"
 対々和
 大三元
 断么九
-平和";
+平和";"Win with
+Riichi
+Tsumo
+Dora
+yaku!
+4 Concealed Triplets
+Thirteen Orphans
+Three Color Straight
+Seven Pairs
+Half Flush
+Full Flush
+3 Concealed Triplets
+Identical Sequences
+All Triplets
+Big Three Dragons
+All Simples
+No-points hand"
 "SPRITE\SPLIMIT";"00000000_j";"この対局は
 立直
 ツモ
@@ -247,7 +302,23 @@ Casual Wear 3"
 対々和
 大三元
 断么九
-平和";
+平和";"Win with
+Riichi
+Tsumo
+Dora
+yaku!
+4 Concealed Triplets
+Thirteen Orphans
+Three Color Straight
+Seven Pairs
+Half Flush
+Full Flush
+3 Concealed Triplets
+Identical Sequences
+All Triplets
+Big Three Dragons
+All Simples
+No-points hand"
 "SPRITE\SPMAJONG";"00000000_j";"オ一トツモ
 双葉理保
 オ一ト対局
@@ -269,24 +340,57 @@ ON
 牌透視
 巡目
 残り
-0 1 2 3 4 5 6 7 8 9 点 + -";
+0 1 2 3 4 5 6 7 8 9 点 + -";"Auto-Draw
+Riho Futaba
+Auto-Play
+Player
+Return to Title
+OFF
+Cancel
+ON
+Riichi
+/
+Pon
+Chi
+Draw
+Dora
+Kan
+Tsumo
+Ron
+Ippatsu Angel
+X-Ray (NOTE: probably cut feature. Gal Mahjong for psx seems to have this ability.)
+Round
+Left
+0 1 2 3 4 5 6 7 8 9 Pts + -"
 "SPRITE\SPMAJONG";"00000001_j";"東
 南
-親";
+親";"E
+S
+D
+(NOTE: East, South, Dealer)"
 "SPRITE\SPMAJONG";"00000002_j";"ロン
 リ一チ
-ツモ";
+ツモ";"Ron
+Riichi
+Tsumo"
 "SPRITE\SPMAJONG";"00000003_j";"チー
 ポン
-カン";
+カン";"Chi
+Pon
+Kan"
 "SPRITE\SPMAJONG";"00000004_j";"流局
-ノーテン";
-"SPRITE\SPMAJONG";"00000005_j";"テンパイ";
+ノーテン";"Exhaustive Draw
+Noten"
+"SPRITE\SPMAJONG";"00000005_j";"テンパイ";"Tenpai"
 "SPRITE\SPMAJONG";"00000006_j";"満貫
 跳満
 倍満
 三倍満
-役満";
+役満";"Mangan
+Haneman
+Baiman
+Sanbaiman
+Yakuman"
 "SPRITE\SPMAJONG";"00000007_j";"立直
 一発
 門前清摸和
@@ -327,7 +431,47 @@ ON
 大車輪
 天和
 地和
-人和";
+人和";"Riichi
+Ippatsu
+Fully Concealed
+Dora
+Honor tiles
+No-points hand
+All Simples
+1x Identical Sequences
+Dead Wall Draw
+Robbing a Quad
+Last Tile Draw
+Last Tile Claim
+2x Riichi
+Full Straight
+Common Ends
+Three Color Straight
+Mixed Triplets
+Seven Pairs
+All Triplets
+3 Concealed Triplets
+Three Quads
+Terminals and Honors
+Little Three Dragons
+Half Flush
+2x Identical Sequences
+Perfect Ends
+Full Flush
+Nagashi Mangan
+Big Three Dragons
+Big Four Winds
+Little Four Winds
+4 Concealed Triplets
+Four Quads
+Thirteen Orphans
+All Green
+All Terminals
+Nine Gates
+Big Wheels
+Blessing of Heaven
+Blessing of Earth
+Blessing of Man"
 "SPRITE\SPMAJONG";"00000008_j";"0 1 2 3 4 5 6 7 8 9 翻 符 点
 満貫
 跳満
@@ -335,14 +479,27 @@ ON
 三倍満
 役満
 字一色
-八連荘";
+八連荘";"0 1 2 3 4 5 6 7 8 9 Han Fu Pts
+Mangan
+Haneman
+Baiman
+Sanbaiman
+Yakuman
+All Honors
+8 in a row"
 "SPRITE\SPMAJONG";"00000009_j";"東
 南
 局
 一
 二
 三
-四";
+四";"East
+South
+
+1
+2
+3
+4"
 "SPRITE\SPMAJONG";"0000000c_j";"捨て牌";
 "SPRITE\SPMAJONG";"0000000e_j";"積み込み
 を使用しますか?
@@ -351,8 +508,15 @@ ON
 ロン消滅
 牌交換
 はい
-いいえ";
-"SPRITE\SPMAJONG";"0000000f_j";"アイテムSHOP";
+いいえ";"Loader?
+Activate
+Super Loader?
+Hyper Loader?
+Ron is Gone?
+Tile Swap?
+Yes
+No"
+"SPRITE\SPMAJONG";"0000000f_j";"アイテムSHOP";"Item Shop"
 "SPRITE\SPMAJONG";"00000010_j";"ハイパー積込
 一発エンジェル
 ロン消滅
@@ -360,17 +524,28 @@ ON
 牌交換
 フィルム
 積込
-ズ一ムレンズ";
+ズ一ムレンズ";"Hyper Loader
+Ippatsu Angel
+Ron is Gone
+Super Loader
+Tile Swap
+Film
+Loader
+Zoom Lens"
 "SPRITE\SPMAJONG";"00000011_j";"タイトルに戻ります
 よろしいですか?
 はい
-いいえ";
-"SPRITE\SPOPTION";"00000000_j";"オプションだよ";
-"SPRITE\SPOPTION";"00000001_j";"ル一ルを決めてね";
-"SPRITE\SPOPTION";"00000002_j";"オプション";
-"SPRITE\SPOPTION";"00000003_j";"ル一ル設足";
+いいえ";"Return to Title
+Are you sure?
+Yes
+No"
+"SPRITE\SPOPTION";"00000000_j";"オプションだよ";"Options"
+"SPRITE\SPOPTION";"00000001_j";"ル一ルを決めてね";"Set Rules"
+"SPRITE\SPOPTION";"00000002_j";"オプション";"Options"
+"SPRITE\SPOPTION";"00000003_j";"ル一ル設足";"Rules"
 "SPRITE\SPOPTION";"00000004_j";"ステレオ
-モノラル";
+モノラル";"Stereo
+Mono"
 "SPRITE\SPOPTION";"00000006_j";"喰い断么
 人和
 自摸平和
@@ -384,7 +559,20 @@ ON
 二倍役満
 裏ドラ
 槓ドラ
-槓ウラ";
+槓ウラ";"Kuitan
+Blessing of Man
+No-points
+Big Wheels
+2 Fu Rule
+ON
+OFF
+Ippatsu
+8 in a row
+Kazoe Yakuman
+Double Yakuman
+Uradora
+Kandora
+Kanura"
 "SPRITE\SPOPTION";"00000007_j";"サウンド
 サウンド
 セーブ
@@ -392,8 +580,15 @@ ON
 ロ一ド
 ロ一ド
 ルール設定
-ルール設定";
-"SPRITE\SPSHOP";"00000000_j";"アイテムSHOP";
+ルール設定";"Sound
+Sound
+Save
+Save
+Load
+Load
+Set Rules
+Set Rules"
+"SPRITE\SPSHOP";"00000000_j";"アイテムSHOP";"Item Shop"
 "SPRITE\SPSHOP";"00000001_j";"ハイパー積込
 一発エンジェル
 ロン消滅
@@ -401,7 +596,14 @@ ON
 牌交換
 フィルム
 積込
-ズ一ムレンズ";
+ズ一ムレンズ";"Hyper Loader
+Ippatsu Angel
+Ron is Gone
+Super Loader
+Tile Swap
+Film
+Loader
+Zoom Lens"
 "SPRITE\SPSTAFF";"00000000_j-00000004_j";"キャスト
 双葉 理保 : 後藤 邑子
 挿入歌
@@ -519,22 +721,36 @@ Yuji Ito"
 D3Publisher Inc.
 English Translation Patch by
 ScatterBrain"
-"SPRITE\SPSTSEL";"00000000_j";"何処で麻雀するの?";
-"SPRITE\SPSTSEL";"00000001_j";"ステ一ヅセレクト";
+"SPRITE\SPSTSEL";"00000000_j";"何処で麻雀するの?";"Select Stage"
+"SPRITE\SPSTSEL";"00000001_j";"ステ一ヅセレクト";"Locations"
 "SPRITE\SPSTSEL";"00000002_j";"ビ一チ
 プール
 学校
 教室
-お部屋";
+お部屋";"Beach
+Pool
+Schoolyard
+Classroom
+Bedroom"
 "SPRITE\SPTITLE";"00000005_j";"対局
 ギャラリー
 オプション
 対局
 ギャラリー
-オプション";
+オプション";"Play
+Gallery
+Options
+Play
+Gallery
+Options"
 "SPRITE\SPTITLE";"00000006_j";"フリー対局モード
 シナリオモード
 ハンデ戦モード
 フリー対局モード
 シナリオモード
-ハンデ戦モード";
+ハンデ戦モード";"Free Mode
+Scenario Mode
+Handicap Mode
+Free Mode
+Scenario Mode
+Handicap Mode"
