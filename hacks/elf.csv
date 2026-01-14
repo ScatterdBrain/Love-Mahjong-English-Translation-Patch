@@ -1,0 +1,446 @@
+"memory_address";"file_offset";"bytes_change";"code_change";"description"
+;;;;"cross/circle button swap"
+"001758CC";"000768CC";"34AC1A08";"j 0x006AB0D0";"jump to a code that swaps button press bits"
+"006AB0D0";"005AC0D0";"60007130";"andi s1,v1,0x0060";"this code isolates bits for cross and cirlce button presses then swaps them only if one of them is pressed"
+"006AB0D4";"005AC0D4";"FFFF2526";"addiu a1,s1,-0x1";
+"006AB0D8";"005AC0D8";"5F00A52C";"sltiu a1,a1,0x005F";
+"006AB0DC";"005AC0DC";"0200A010";"beq a1,zero,0x006AB0E8";
+"006AB0E0";"005AC0E0";"00000000";"nop ";
+"006AB0E4";"005AC0E4";"60006338";"xori v1,v1,0x0060";
+"006AB0E8";"005AC0E8";"35D60508";"j 0x001758D4";
+"006AB0EC";"005AC0EC";"6B00043C";"lui a0,0x006B";
+;;;;"fix for closed kan"
+"00693E38";"00594E38";"00000043";;"x start"
+"00694058";"00595058";"00004043";;"y start"
+"001499EC";"0004A9EC";"22000624";"addiu a2,zero,0x22";"originally the game uses ""white dragon"" tiles colored orange for 2 outer tiles of closed kan. this fix makes so it would use different texture."
+"00149A1C";"0004AA1C";"22000624";"addiu a2,zero,0x22";
+"00149D3C";"0004AD3C";"2300222E";"sltiu v0,s1,0x0023";
+;;;;"dialogue hacks small"
+"00695438";"00596438";"0000A041";;"width of char texture for dialogue"
+"0069543C";"0059643C";"0000A041";;"height of char texture for dialogue"
+"00695570";"00596570";"0000A041";;"width of char texture for retry window"
+"00695574";"00596574";"0000A041";;"height of char texture for retry window"
+"00695588";"00596588";"0000D042";;"x position retry text"
+"0013C994";"0003D994";"00000000";"nop ";"these two originally wrote fixed positions"
+"0013C99C";"0003D99C";"00000000";"nop ";"for chars in dialogue window"
+"00695658";"00596658";"0000F042";;"x position first char of dialogue"
+"0013D4C4";"0003E4C4";"A041013C";"lui at,0x41A0";"char spacing retry text"
+"00695598";"00596598";"0000D042";;"x position left border dialogue window"
+"006955A8";"005965A8";"00000044";;"x position right border dialogue window"
+"006955B8";"005965B8";"0000F042";;"x position background dialogue window"
+"00695468";"00596468";"0000F843";;"x position dialogue window button prompt"
+"0069546C";"0059646C";"0000BE43";;"y position dialogue window button prompt"
+"0013E35C";"0003F35C";"D041013C";"lui at,0x41D0";"background spacing dialogue window"
+"0013DE7C";"0003EE7C";"1500652A";"slti a1,s3,0x0015";"increase amount of chars per line regular"
+"0013E020";"0003F020";"1500C32A";"slti v1,s6,0x0015";"increase amount of chars per line when dialogue skipped"
+;;;;"dialogue hacks big"
+"0013EC64";"0003FC64";"54010224";"addiu v0,zero,0x154";"deciding which char texture to use or ""getstruv"" as it's called"
+"0013EC68";"0003FC68";"2D80A000";"daddu s0,a1,zero";"originally, to decide what texture to use for given char, the game would use what seems to be a binary search on the string of all avalible characters then uses its position to calculate column and row on a grid. instead i just use first byte of a char for column and second byte for row."
+"0013EC6C";"0003FC6C";"00088044";"mtc1 zero,f01";
+"0013EC70";"0003FC70";"2D304000";"daddu a2,v0,zero";
+"0013EC74";"0003FC74";"2D380000";"daddu a3,zero,zero";
+"0013EC78";"0003FC78";"C2170600";"srl v0,a2,0x1F";
+"0013EC7C";"0003FC7C";"86080046";"mov.s f02,f01";
+"0013EC80";"0003FC80";"2110C200";"addu v0,a2,v0";
+"0013EC84";"0003FC84";"43280200";"sra a1,v0,0x01";
+"0013EC88";"0003FC88";"0E00C710";"beq a2,a3,0x0013ECC4";
+"0013EC8C";"0003FC8C";"FEFFA530";"andi a1,a1,0xFFFE";
+"0013EC90";"0003FC90";"00000796";"lhu a3,0x0(s0)";
+"0013EC94";"0003FC94";"A041013C";"lui at,0x41A0";
+"0013EC98";"0003FC98";"00008144";"mtc1 at,f00";
+"0013EC9C";"0003FC9C";"00000292";"lbu v0,0x0(s0)";
+"0013ECA0";"0003FCA0";"7F004230";"andi v0,v0,0x007F";
+"0013ECA4";"0003FCA4";"01000592";"lbu a1,0x1(s0)";
+"0013ECA8";"0003FCA8";"7F00A530";"andi a1,a1,0x007F";
+"0013ECAC";"0003FCAC";"00088244";"mtc1 v0,f01";
+"0013ECB0";"0003FCB0";"60088046";"cvt.s.w f01,f01";
+"0013ECB4";"0003FCB4";"00108544";"mtc1 a1,f02";
+"0013ECB8";"0003FCB8";"A0108046";"cvt.s.w f02,f02";
+"0013ECBC";"0003FCBC";"42080046";"mul.s f01,f01,f00";
+"0013ECC0";"0003FCC0";"82100046";"mul.s f02,f02,f00";
+"0013ECC4";"0003FCC4";"01004056";"bnel s2,zero,0x0013ECCC";
+"0013ECC8";"0003FCC8";"000042E6";"swc1 f02,0x0(s2)";
+"0013ECCC";"0003FCCC";"01006056";"bnel s3,zero,0x0013ECD4";
+"0013ECD0";"0003FCD0";"000061E6";"swc1 f01,0x0(s3)";
+"0013ECD4";"0003FCD4";"0000B0DF";"ld s0,0x0(sp)";
+"0013ECD8";"0003FCD8";"0800B1DF";"ld s1,0x8(sp)";
+"0013ECDC";"0003FCDC";"1000B2DF";"ld s2,0x10(sp)";
+"0013ECE0";"0003FCE0";"1800B3DF";"ld s3,0x18(sp)";
+"0013ECE4";"0003FCE4";"2000BFDF";"ld ra,0x20(sp)";
+"0013ECE8";"0003FCE8";"0800E003";"jr ra";
+"0013ECEC";"0003FCEC";"3000BD27";"addiu sp,sp,0x30";
+"0013ECF0";"0003FCF0";"00000000";"nop ";
+"0013ECF4";"0003FCF4";"6900013C";"lui at,0x0069";"char spacing in dialogue window"
+"0013ECF8";"0003FCF8";"01006056";"bnel s3,zero,0x0013ED00";"originally the game would pre-calculate all chars positions when dialogue window is loaded and store them at ""00695658"" then use char and line counters to get coordinates where to position a char. instead i use base x coordinate that i add chars width to which makes it more dynamic. altough only real use for this is to make ""space"" take half char width."
+"0013ECFC";"0003FCFC";"04002124";"addiu at,at,0x4";
+"0013ED00";"0003FD00";"585620C4";"lwc1 f00,0x5658(at)";
+"0013ED04";"0003FD04";"0200E054";"bnel a3,zero,0x0013ED10";"""space"" or not"
+"0013ED08";"0003FD08";"A041013C";"lui at,0x41A0";
+"0013ED0C";"0003FD0C";"2041013C";"lui at,0x4120";
+"0013ED10";"0003FD10";"00108144";"mtc1 at,f02";
+"0013ED14";"0003FD14";"00000246";"add.s f00,f00,f02";
+"0013ED18";"0003FD18";"6900063C";"lui a2,0x0069";
+"0013ED1C";"0003FD1C";"5C56C0E4";"swc1 f00,0x565C(a2)";
+"0013ED20";"0003FD20";"02000724";"addiu a3,zero,0x2";
+"0013ED24";"0003FD24";"0500F450";"beql a3,s4,0x0013ED3C";
+"0013ED28";"0003FD28";"B443013C";"lui at,0x43B4";"3rd line y coordinate"
+"0013ED2C";"0003FD2C";"FFFFE724";"addiu a3,a3,-0x1";
+"0013ED30";"0003FD30";"0200F450";"beql a3,s4,0x0013ED3C";
+"0013ED34";"0003FD34";"AA43013C";"lui at,0x43AA";"2nd line y coordinate"
+"0013ED38";"0003FD38";"A043013C";"lui at,0x43A0";"1st line y coordinate"
+"0013ED3C";"0003FD3C";"00088144";"mtc1 at,f01";
+"0013ED40";"0003FD40";"71F70408";"j 0x0013DDC4";
+"0013ED44";"0003FD44";"00000000";"nop ";
+"0013ED48";"0003FD48";"6900043C";"lui a0,0x0069";"same as above only for when you skip dialogue"
+"0013ED4C";"0003FD4C";"0100C056";"bnel s6,zero,0x0013ED54";
+"0013ED50";"0003FD50";"04008424";"addiu a0,a0,0x4";
+"0013ED54";"0003FD54";"585681C4";"lwc1 f01,0x5658(a0)";
+"0013ED58";"0003FD58";"0200E054";"bnel a3,zero,0x0013ED64";
+"0013ED5C";"0003FD5C";"A041013C";"lui at,0x41A0";
+"0013ED60";"0003FD60";"2041013C";"lui at,0x4120";
+"0013ED64";"0003FD64";"00108144";"mtc1 at,f02";
+"0013ED68";"0003FD68";"40080246";"add.s f01,f01,f02";
+"0013ED6C";"0003FD6C";"6900063C";"lui a2,0x0069";
+"0013ED70";"0003FD70";"5C56C1E4";"swc1 f01,0x565C(a2)";
+"0013ED74";"0003FD74";"02000724";"addiu a3,zero,0x2";
+"0013ED78";"0003FD78";"0500F450";"beql a3,s4,0x0013ED90";
+"0013ED7C";"0003FD7C";"B443013C";"lui at,0x43B4";
+"0013ED80";"0003FD80";"FFFFE724";"addiu a3,a3,-0x1";
+"0013ED84";"0003FD84";"0200F450";"beql a3,s4,0x0013ED90";
+"0013ED88";"0003FD88";"AA43013C";"lui at,0x43AA";
+"0013ED8C";"0003FD8C";"A043013C";"lui at,0x43A0";
+"0013ED90";"0003FD90";"00108144";"mtc1 at,f02";
+"0013ED94";"0003FD94";"E8F70408";"j 0x0013DFA0";
+"0013ED98";"0003FD98";"00000000";"nop ";
+"0013ED9C";"0003FD9C";"00000000";"nop ";
+"0013EDA0";"0003FDA0";"00000000";"nop ";
+"0013EDA4";"0003FDA4";"00000000";"nop ";
+"0013EDA8";"0003FDA8";"00000000";"nop ";
+"0013EDAC";"0003FDAC";"00000000";"nop ";
+"0013EDB0";"0003FDB0";"00000000";"nop ";
+"0013EDB4";"0003FDB4";"00000000";"nop ";
+"0013EDB8";"0003FDB8";"00000000";"nop ";
+"0013EDBC";"0003FDBC";"00000000";"nop ";
+"0013EDC0";"0003FDC0";"00000000";"nop ";
+;;;;"jump to spacing hack regular"
+"0013DDAC";"0003EDAC";"3DFB0408";"j 0x0013ECF4";
+"0013DDB0";"0003EDB0";"7F7FE730";"andi a3,a3,0x7F7F";
+"0013DDB4";"0003EDB4";"00000000";"nop ";
+"0013DDB8";"0003EDB8";"00000000";"nop ";
+"0013DDBC";"0003EDBC";"00000000";"nop ";
+"0013DDC0";"0003EDC0";"00000000";"nop ";
+"0013DDC4";"0003EDC4";"7F47013C";"lui at,0x477F";
+"0013DDC8";"0003EDC8";"00982134";"ori at,at,0x9800";
+"0013DDCC";"0003EDCC";"00108144";"mtc1 at,f02";
+"0013DDD0";"0003EDD0";"21105300";"addu v0,v0,s3";
+"0013DDD4";"0003EDD4";"01007326";"addiu s3,s3,0x1";
+"0013DDD8";"0003EDD8";"80100200";"sll v0,v0,0x02";
+"0013DDDC";"0003EDDC";"2D200002";"daddu a0,s0,zero";
+"0013DDE0";"0003EDE0";"01000524";"addiu a1,zero,0x1";
+"0013DDE4";"0003EDE4";"2D300000";"daddu a2,zero,zero";
+"0013DDE8";"0003EDE8";"2D382002";"daddu a3,s1,zero";
+"0013DDEC";"0003EDEC";"01000824";"addiu t0,zero,0x1";
+"0013DDF0";"0003EDF0";"1000A0E7";"swc1 f00,0x10(sp)";
+"0013DDF4";"0003EDF4";"1400A1E7";"swc1 f01,0x14(sp)";
+"0013DDF8";"0003EDF8";"1800A2E7";"swc1 f02,0x18(sp)";
+;;;;"jump to spacing hack when skipped"
+"0013DF88";"0003EF88";"58568424";"addiu a0,a0,0x5658";
+"0013DF8C";"0003EF8C";"21184300";"addu v1,v0,v1";
+"0013DF90";"0003EF90";"21104400";"addu v0,v0,a0";
+"0013DF94";"0003EF94";"52FB0408";"j 0x0013ED48";
+"0013DF98";"0003EF98";"7F7FE730";"andi a3,a3,0x7F7F";
+"0013DF9C";"0003EF9C";"00000000";"nop ";
+"0013DFA0";"0003EFA0";"2D200002";"daddu a0,s0,zero";
+"0013DFA4";"0003EFA4";"2000A227";"addiu v0,sp,0x20";
+"0013DFA8";"0003EFA8";"2D384000";"daddu a3,v0,zero";
+"0013DFAC";"0003EFAC";"7F47013C";"lui at,0x477F";
+"0013DFB0";"0003EFB0";"007A2134";"ori at,at,0x7A00";
+"0013DFB4";"0003EFB4";"00008144";"mtc1 at,f00";
+"0013DFB8";"0003EFB8";"01000524";"addiu a1,zero,0x1";
+"0013DFBC";"0003EFBC";"2D300000";"daddu a2,zero,zero";
+"0013DFC0";"0003EFC0";"01000824";"addiu t0,zero,0x1";
+"0013DFC4";"0003EFC4";"2000A1E7";"swc1 f01,0x20(sp)";
+"0013DFC8";"0003EFC8";"0100D626";"addiu s6,s6,0x1";
+"0013DFCC";"0003EFCC";"2400A2E7";"swc1 f02,0x24(sp)";
+"0013DFD0";"0003EFD0";"2800A0E7";"swc1 f00,0x28(sp)";
+;;;;"sprites positions"
+;;;;"options main"
+"0067BC28";"0057CC28";"00008F43";;"dpad icon x position"
+"0067BC50";"0057CC50";"0000C143";;"cross icon x position"
+"0067BC78";"0057CC78";"0000F843";;"circle icon x position"
+"0067BC98";"0057CC98";"00008042";;"select width"
+"0067BCA0";"0057CCA0";"00009B43";;"select x position"
+"0067BCA4";"0057CCA4";"0000B243";;"select y position"
+"0067BCC0";"0057CCC0";"00009442";;"confirm width"
+"0067BCC8";"0057CCC8";"0000CD43";;"confirm x position"
+"0067BCCC";"0057CCCC";"0000B243";;"confirm y position"
+"0067BCE8";"0057CCE8";"00008042";;"return width"
+"0067BCF0";"0057CCF0";"00000244";;"return/cancel x position"
+"0067BCF4";"0057CCF4";"0000B243";;"return/cancel y position"
+"0067BD08";"0057CD08";"00008042";;"return width when you return from rules screen"
+"0067BD10";"0057CD10";"00009042";;"cancel x start"
+"0067BD18";"0057CD18";"00008C42";;"cancel width"
+;;;;"options rules"
+"0067C138";"0057D138";"00005043";;"all of these just move ""off"" indicator to the left so there wouldn't be a huge gap"
+"0067C188";"0057D188";"00005043";;
+"0067C1D8";"0057D1D8";"00005043";;
+"0067C228";"0057D228";"00005043";;
+"0067C278";"0057D278";"00005043";;
+"0067C2C8";"0057D2C8";"00005043";;
+"0067C318";"0057D318";"0000EE43";;
+"0067C368";"0057D368";"0000EE43";;
+"0067C3B8";"0057D3B8";"0000EE43";;
+"0067C408";"0057D408";"0000EE43";;
+"0067C458";"0057D458";"0000EE43";;
+"0067C4A8";"0057D4A8";"0000EE43";;
+;;;;"gallery main"
+;;;;"""s1"" seems to be static and close to options sprites data so i just load from there"
+"001165B4";"000175B4";"8F43013C";"lui at,0x438F";"dpad icon x position"
+"00116258";"00017258";"F8152EC6";"lwc1 f14,0x15F8(s1)";"select width"
+"001165E0";"000175E0";"9B43013C";"lui at,0x439B";"select x position"
+"001165EC";"000175EC";"54162DC6";"lwc1 f13,0x1654(s1)";"select y position"
+"001165FC";"000175FC";"C143013C";"lui at,0x43C1";"cross icon x position"
+"0011629C";"0001729C";"20162EC6";"lwc1 f14,0x1620(s1)";"confirm width"
+"00116618";"00017618";"CD43013C";"lui at,0x43CD";"confirm x position"
+"00116624";"00017624";"54162DC6";"lwc1 f13,0x1654(s1)";"confirm y position"
+"00116634";"00017634";"F843013C";"lui at,0x43F8";"circle icon x position"
+"001162D0";"000172D0";"68162EC6";"lwc1 f14,0x1668(s1)";"return width"
+"001162D4";"000172D4";"06AB0046";"mov.s f12,f21";"return x start"
+"001162D8";"000172D8";"46A30046";"mov.s f13,f20";"return y start"
+"00116650";"00017650";"0244013C";"lui at,0x4402";"return x position"
+"00116658";"00017658";"54162DC6";"lwc1 f13,0x1654(s1)";"return y position"
+;;;;"gallery batsu"
+;;;;"""s3"" in this case same as ""s1"" previously"
+"00117A4C";"00018A4C";"8F43013C";"lui at,0x438F";"dpad icon x position"
+"00117994";"00018994";"B8156EC6";"lwc1 f14,0x15B8(s3)";"select width"
+"00117A68";"00018A68";"9B43013C";"lui at,0x439B";"select x position"
+"00117A74";"00018A74";"14166DC6";"lwc1 f13,0x1614(s3)";"select y position"
+"00117A84";"00018A84";"C143013C";"lui at,0x43C1";"cross icon x position"
+"001179D8";"000189D8";"E0156EC6";"lwc1 f14,0x15E0(s3)";"confirm width"
+"00117AA0";"00018AA0";"CD43013C";"lui at,0x43CD";"confirm x position"
+"00117AAC";"00018AAC";"14166DC6";"lwc1 f13,0x1614(s3)";"confirm y position"
+"00117ABC";"00018ABC";"F843013C";"lui at,0x43F8";"circle icon x position"
+"00117A04";"00018A04";"28166EC6";"lwc1 f14,0x1628(s3)";"return width"
+"00117A30";"00018A30";"06AB0046";"mov.s f12,f21";"return x start"
+"00117A44";"00018A44";"24166DC6";"lwc1 f13,0x1624(s3)";"return y start"
+"00117AD8";"00018AD8";"0244013C";"lui at,0x4402";"return x position"
+"00117AE4";"00018AE4";"14166DC6";"lwc1 f13,0x1614(s3)";"return y position"
+;;;;"gallery bonus"
+;;;;"""s3"" is different but still static"
+"00116F98";"00017F98";"8F43013C";"lui at,0x438F";"dpad icon x position"
+"00116EF4";"00017EF4";"E8156EC6";"lwc1 f14,0x15E8(s3)";"select width"
+"00116FC8";"00017FC8";"9B43013C";"lui at,0x439B";"select x position"
+"00116FD4";"00017FD4";"44166DC6";"lwc1 f13,0x1644(s3)";"select y position"
+"00116FE4";"00017FE4";"C143013C";"lui at,0x43C1";"cross icon x position"
+"00116F38";"00017F38";"10166EC6";"lwc1 f14,0x1610(s3)";"confirm width"
+"00117000";"00018000";"CD43013C";"lui at,0x43CD";"confirm x position"
+"0011700C";"0001800C";"44166DC6";"lwc1 f13,0x1644(s3)";"confirm y position"
+"0011701C";"0001801C";"F843013C";"lui at,0x43F8";"circle icon x position"
+"00116F64";"00017F64";"58166EC6";"lwc1 f14,0x1658(s3)";"return width"
+"00116F88";"00017F88";"06AB0046";"mov.s f12,f21";"return x start"
+"00116F90";"00017F90";"46A30046";"mov.s f13,f20";"return y start"
+"00117038";"00018038";"0244013C";"lui at,0x4402";"return x position"
+"00117044";"00018044";"44166DC6";"lwc1 f13,0x1644(s3)";"return y position"
+;;;;"gallery photo"
+;;;;"""s4"" same as before"
+"00119DF4";"0001ADF4";"E4148CC6";"lwc1 f12,0x14E4(s4)";"dpad icon x position"
+"00119BE8";"0001ABE8";"60158EC6";"lwc1 f14,0x1560(s4)";"select width"
+"00119E0C";"0001AE0C";"D042013C";"lui at,0x42D0";"select x position"
+"00119E18";"0001AE18";"BC158DC6";"lwc1 f13,0x15BC(s4)";"select y position"
+"00119E28";"0001AE28";"3243013C";"lui at,0x4332";"cross icon x position"
+"00119C34";"0001AC34";"88158EC6";"lwc1 f14,0x1588(s4)";"confirm width"
+"00119E44";"0001AE44";"4A43013C";"lui at,0x434A";"confirm x position"
+"00119E50";"0001AE50";"BC158DC6";"lwc1 f13,0x15BC(s4)";"confirm y position"
+"00119E60";"0001AE60";"8F43013C";"lui at,0x438F";"square icon x position"
+"00119C7C";"0001AC7C";"D0158EC6";"lwc1 f14,0x15D0(s4)";"delete width"
+"00119C74";"0001AC74";"D8158CC6";"lwc1 f12,0x15D8(s4)";"delete x start"
+"00119E7C";"0001AE7C";"9B43013C";"lui at,0x439B";"delete x position"
+"00119E88";"0001AE88";"BC158DC6";"lwc1 f13,0x15BC(s4)";"delete y position"
+"00119D8C";"0001AD8C";"B343013C";"lui at,0x43B3";"l1-r1 y position"
+"00119E98";"0001AE98";"C143013C";"lui at,0x43C1";"l1 x position"
+"00119EB4";"0001AEB4";"CE43013C";"lui at,0x43CE";"r1 x position"
+"00119CE0";"0001ACE0";"D8158CC6";"lwc1 f12,0x15D8(s4)";"page x start"
+"00119ED0";"0001AED0";"DA43013C";"lui at,0x43DA";"page x position"
+"00119EDC";"0001AEDC";"BC158DC6";"lwc1 f13,0x15BC(s4)";"page y position"
+"00119EEC";"0001AEEC";"F843013C";"lui at,0x43F8";"circle icon x position"
+"00119D40";"0001AD40";"D0158EC6";"lwc1 f14,0x15D0(s4)";"return width"
+"00119D24";"0001AD24";"06B30046";"mov.s f12,f22";"return x start"
+"00119D34";"0001AD34";"46A30046";"mov.s f13,f20";"return y start"
+"00119F08";"0001AF08";"0244013C";"lui at,0x4402";"return x position"
+"00119F14";"0001AF14";"BC158DC6";"lwc1 f13,0x15BC(s4)";"return y position"
+"0067A534";"0057B534";"00006043";;"empty y start"
+"0067A558";"0057B558";"00001442";;"sit-ups width"
+"0067A568";"0057B568";"00006442";;"high knees width"
+"0067A570";"0057B570";"00000043";;"squats x start"
+"0067A578";"0057B578";"00001042";;"squats width"
+"0067A580";"0057B580";"00008042";;"stretching x start"
+"0067A588";"0057B588";"00005042";;"stretching width"
+"0067A590";"0057B590";"00002C43";;"jumping jacks x start"
+"0067A598";"0057B598";"00008842";;"jumping jacks width"
+"0067A5A0";"0057B5A0";"00008042";;"handstand x start"
+"0067A5A8";"0057B5A8";"00005442";;"handstand width"
+"0067A5B0";"0057B5B0";"00002C43";;"backbend x start"
+"0067A5B8";"0057B5B8";"00004442";;"backbend width"
+"0067A5C8";"0057B5C8";"00002442";;"backflip width"
+"0067A5D8";"0057B5D8";"00007042";;"calisthenics width"
+;;;;"costume-stage select"
+"0067B808";"0057C808";"00008F43";;"dpad icon x position"
+"0067B830";"0057C830";"0000C143";;"cross icon x position"
+"0067B858";"0057C858";"0000F843";;"circle icon x position"
+"0067B878";"0057C878";"00008042";;"select width"
+"0067B880";"0057C880";"00009B43";;"select x position"
+"0067B884";"0057C884";"0000B243";;"select y position"
+"0067B8A0";"0057C8A0";"00009442";;"confirm width"
+"0067B8A8";"0057C8A8";"0000CD43";;"confirm x position"
+"0067B8AC";"0057C8AC";"0000B243";;"confirm y position"
+"0067B8C8";"0057C8C8";"00008042";;"return width"
+"0067B8D0";"0057C8D0";"00000244";;"return x position"
+"0067B8D4";"0057C8D4";"0000B243";;"return y position"
+;;;;"handicap mode"
+"0011D2F8";"0001E2F8";"CC42013C";"lui at,0x42CC";"title width"
+;;;;"mahjong special ability window"
+"0069ADA0";"0059BDA0";"0000D042";;"hyper loader width"
+"0069ADA8";"0059BDA8";"00009743";;"hyper loader x position"
+"0069ADC8";"0059BDC8";"0000D042";;"super loader width"
+"0069ADD0";"0059BDD0";"00009743";;"super loader x position"
+"0069ADF0";"0059BDF0";"00007842";;"loader width"
+"0069ADF8";"0059BDF8";"0000A243";;"loader x position"
+"0069AE18";"0059BE18";"0000A042";;"tile swap width"
+"0069AE20";"0059BE20";"00009E43";;"tile swap x position"
+"0069AE40";"0059BE40";"0000BC42";;"ron is gone width"
+"0069AE48";"0059BE48";"00009B43";;"ron is gone x position"
+"0069AE68";"0059BE68";"00008042";;"activate width"
+"0069AE70";"0059BE70";"00006E43";;"activate x position default?"
+"0069AE80";"0059BE80";"00006E43";;"activate x position for hyper loader"
+"0069AE90";"0059BE90";"00006E43";;"activate x position for super loader"
+"0069AEA0";"0059BEA0";"00008243";;"activate x position for loader"
+"0069AEB0";"0059BEB0";"00007C43";;"activate x position for tile swap"
+"0069AEC0";"0059BEC0";"00007643";;"activate x position for ron is gone"
+"0069AED8";"0059BED8";"00003C43";;"yes x start"
+"0069AEDC";"0059BEDC";"0000C042";;"yes y start"
+"0069AEE0";"0059BEE0";"0000F041";;"yes width"
+"0069AEE8";"0059BEE8";"00008543";;"yes x position"
+"0069AF00";"0059BF00";"00000843";;"no x start"
+"0069AF08";"0059BF08";"0000F041";;"no width"
+"0069AF10";"0059BF10";"0000AD43";;"no x position"
+;;;;"round winds"
+"0068A73C";"0058B73C";"00000000";;"east y start"
+"0068A740";"0058B740";"00003043";;"east width"
+"0068A744";"0058B744";"0000B042";;"east height"
+"0068A760";"0058B760";"00003043";;"south x start"
+"0068A764";"0058B764";"00000000";;"south y start"
+"0068A768";"0058B768";"00004643";;"south width"
+"0068A76C";"0058B76C";"0000B042";;"south height"
+"0068A78C";"0058B78C";"0000B042";;"1 x start"
+"0068A790";"0058B790";"0000B042";;"1 width"
+"0068A794";"0058B794";"0000B042";;"1 height"
+"0068A7B4";"0058B7B4";"0000B042";;"2 y start"
+"0068A7B8";"0058B7B8";"0000B042";;"2 width"
+"0068A7BC";"0058B7BC";"0000B042";;"2 height"
+"0068A7D8";"0058B7D8";"0000B043";;"ryuukyoku x start"
+"0068A7DC";"0058B7DC";"0000B042";;"ryuukyoku y start"
+"0068A820";"0058B820";"00004043";;"wind x position"
+"0068A830";"0058B830";"0000C443";;"round number x position"
+"0068A834";"0058B834";"0000E041";;"round number y position"
+;;;;"riho score window"
+"0069CFB8";"0059DFB8";"00000042";;"name x possition"
+;;;;"mahjong decisions window"
+"00699DB8";"0059ADB8";"00008C42";;"cancel width"
+"00699E80";"0059AE80";"00005042";;"riichi width"
+"00699ED0";"0059AED0";"00008042";;"tsumo width"
+"00699EF0";"0059AEF0";"00001043";;"ron x start"
+"00699FD8";"0059AFD8";"0000B841";;"cancel centering"
+"00699FE0";"0059AFE0";"00001442";;"pon centering"
+"00699FE4";"0059AFE4";"00001442";;"chi centering"
+"00699FE8";"0059AFE8";"00001442";;"kan centering"
+"00699FEC";"0059AFEC";"00000042";;"riichi centering"
+"00699FF0";"0059AFF0";;;"ippatsu angel centering"
+"00699FF4";"0059AFF4";"0000D041";;"tsumo centering"
+"00699FF8";"0059AFF8";"00001442";;"ron centering"
+;;;;"batsu game main"
+;;;;"non of registers hold useful static addres so instead i overwrote some of moves to f14 which seemed to be redundant"
+"0012BB40";"0002CB40";"06D30046";"mov.s f12,f26";"photo x start"
+"0012BB48";"0002CB48";"86AB0046";"mov.s f14,f21";"photo width"
+"0012BC58";"0002CC58";"81D31C46";"sub.s f14,f26,f28";"move width"
+"0012BC98";"0002CC98";"06DB0046";"mov.s f12,f27";"direction x start"
+"0012BCAC";"0002CCAC";"40DB1446";"add.s f13,f27,f20";"direction y start"
+"0012BCB0";"0002CCB0";"80D31C46";"add.s f14,f26,f28";"direction width"
+"0012BCF8";"0002CCF8";"80BB1C46";"add.s f14,f23,f28";"return width"
+"0012BD3C";"0002CD3C";"81DB1C46";"sub.s f14,f27,f28";"show controls width"
+"0012BD5C";"0002CD5C";"80CB1446";"add.s f14,f25,f20";"hide controls width"
+"0012BDE8";"0002CDE8";"80A31C46";"add.s f14,f20,f28";"num width"
+"0012BDF0";"0002CDF0";"C6A30046";"mov.s f15,f20";"num height"
+"0012BE40";"0002CE40";"7A43013C";"lui at,0x437A";"photo y position"
+"0012BE4C";"0002CE4C";"00688144";"mtc1 at,f13";"photo y position"
+"0012BE70";"0002CE70";"8943013C";"lui at,0x4389";"zoom in y position"
+"0012BEA8";"0002CEA8";"9543013C";"lui at,0x4395";"zoom out y position"
+"0012BEFC";"0002CEFC";"A143013C";"lui at,0x43A1";"move y position"
+"0012BF04";"0002CF04";"00688144";"mtc1 at,f13";"move y position"
+"0012BF28";"0002CF28";"AD43013C";"lui at,0x43AD";"direction y position"
+"0012BF34";"0002CF34";"00688144";"mtc1 at,f13";"direction y position"
+"0012BF58";"0002CF58";"B943013C";"lui at,0x43B9";"return y position"
+"0012BF94";"0002CF94";"C543013C";"lui at,0x43C5";"show controls y position"
+"0012BF9C";"0002CF9C";"00688144";"mtc1 at,f13";"show controls y position"
+"0012BFAC";"0002CFAC";"00000000";"nop ";"hide controls y position"
+"0012BFD8";"0002CFD8";"0844013C";"lui at,0x4408";"left x position"
+"0012BFE4";"0002CFE4";"C543013C";"lui at,0x43C5";"left y position"
+"0012BFEC";"0002CFEC";"00688144";"mtc1 at,f13";"left y position"
+"0012BFF4";"0002CFF4";"1544013C";"lui at,0x4415";"count x position"
+"0012C000";"0002D000";"00000000";"nop ";"count y position"
+"0012C010";"0002D010";"FC43013C";"lui at,0x43FC";"num x position"
+"0012C018";"0002D018";"00000000";"nop ";"num y position"
+;;;;"batsu game gallery"
+"001187EC";"000197EC";"A8FE6EC6";"lwc1 f14,-0x158(s3)";"move width"
+"00118820";"00019820";"06E30046";"mov.s f12,f28";"direction x start"
+"0011882C";"0001982C";"40E31446";"add.s f13,f28,f20";"direction y start"
+"0011881C";"0001981C";"B042013C";"lui at,0x42B0";"direction width"
+"00118830";"00019830";"00708144";"mtc1 at,f14";"direction width"
+"00118870";"00019870";"08166EC6";"lwc1 f14,0x1608(s3)";"return width"
+"001188B0";"000198B0";"80A31D46";"add.s f14,f20,f29";"show controls width"
+"001188EC";"000198EC";"86FB0046";"mov.s f14,f31";"hide controls width"
+"00118910";"00019910";"8943013C";"lui at,0x4389";"zoom in y position"
+"00118948";"00019948";"9543013C";"lui at,0x4395";"zoom out y position"
+"0011899C";"0001999C";"6C016DC6";"lwc1 f13,0x16C(s3)";"move y position"
+"001189C8";"000199C8";"AD43013C";"lui at,0x43AD";"direction y position"
+"00118A0C";"00019A0C";"B943013C";"lui at,0x43B9";"return y position"
+"00118A2C";"00019A2C";"40CB1B46";"add.s f13,f25,f27";"square icon y position"
+"00118A00";"00019A00";"C543013C";"lui at,0x43C5";"show controls-hide controls y position"
+;;;;"shop"
+"0069DCA0";"0059ECA0";"00003643";;"dpad icon x position"
+"0069DCC0";"0059ECC0";"00008042";;"select width"
+"0069DCC8";"0059ECC8";"00005043";;"select x position"
+"0069DCCC";"0059ECCC";"0000BF43";;"select y position"
+"0069DCF0";"0059ECF0";"00008E43";;"cross icon x position"
+"0069DD10";"0059ED10";"00002842";;"buy width"
+"0069DD18";"0059ED18";"00009B43";;"buy x position"
+"0069DD1C";"0059ED1C";"0000BF43";;"buy y position"
+"0069DD40";"0059ED40";"0000B843";;"circle icon x position"
+"0069DD60";"0059ED60";"00008042";;"return width"
+"0069DD68";"0059ED68";"0000C543";;"return x position"
+"0069DD6C";"0059ED6C";"0000BF43";;"return y position"
+"0069D3A8";"0059E3A8";"00005043";;"pts x start"
+"0069D3B0";"0059E3B0";"00002042";;"pts width"
+"0069D4C0";"0059E4C0";"00005043";;"rest is also pts"
+"0069D4C8";"0059E4C8";"00002042";;"probably should have edited the graphic but whatever"
+"0069D5D8";"0059E5D8";"00005043";;
+"0069D5E0";"0059E5E0";"00002042";;
+"0069D6F0";"0059E6F0";"00005043";;
+"0069D6F8";"0059E6F8";"00002042";;
+"0069D808";"0059E808";"00005043";;
+"0069D810";"0059E810";"00002042";;
+"0069D920";"0059E920";"00005043";;
+"0069D928";"0059E928";"00002042";;
+"0069DA38";"0059EA38";"00005043";;
+"0069DA40";"0059EA40";"00002042";;
+"0069DB50";"0059EB50";"00005043";;
+"0069DB58";"0059EB58";"00002042";;
+"0069DC68";"0059EC68";"00005043";;
+"0069DC70";"0059EC70";"00002042";;
+;;;;"mahjong result"
+"0069A1D0";"0059B1D0";"0000E042";;"yaku width"
+"0069A1F8";"0059B1F8";;;"yaku width different texture i think its for ""8 in a row"" and ""all honors"" but original fits them so i will leave it"
+"0069A610";"0059B610";"0000B543";;"right side yaku x position"
+"0069A620";"0059B620";"0000B543";;
+"0069A630";"0059B630";"0000B543";;
+"0069A640";"0059B640";"0000B543";;
+"0069ABD8";"0059BBD8";"00005043";;"pts x start"
