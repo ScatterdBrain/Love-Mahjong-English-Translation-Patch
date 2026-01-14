@@ -12,7 +12,20 @@ An English translation patch for "Simple 2000 Ultimate Vol. 5: Love * Mahjong" [
 * [MKPSXISO](https://github.com/Lameguy64/mkpsxiso) - Extraction and rebuilding of BIN image.
 * [Delta Patcher](https://github.com/marco-calautti/DeltaPatcher) - Creation of patch file.
 
+## Resources:
+* Mahjong
+  - [Riichi.Wiki](https://riichi.wiki/Main_Page)
+  - [Wikipedia](https://en.wikipedia.org/wiki/Yaku_(Japanese_mahjong))
+  - [Yakuza Wiki](https://yakuza.fandom.com/wiki/Mahjong)
+  - [Mahjongo](https://mahjongo.com/ja/learn/riichi)
+* 3D models
+  - [Wikipedia](https://en.wikipedia.org/wiki/Wavefront_.obj_file)
+  - [paulbourke.net](https://paulbourke.net/dataformats/obj)
+  - [3D screenshot fork of PCSX2](https://github.com/scurest/pcsx2)
+  - [Sample .obj files](https://groups.csail.mit.edu/graphics/classes/6.837/F03/models/)
+
 ## Screenshots
-![Dialogue](screenshots/Dialogue.png)
-![Mahjong Menu](screenshots/Mahjong_Menu.png)
-![Penalty Game](screenshots/Reward.png)
+![Dialogue](screenshots/dialogue.png)
+![Mahjong Menu](screenshots/mahjong_menu.png)
+![Penalty Game](screenshots/penalty_game.png)
+<img src="screenshots/markings_example.png" width="640" height="448"/>
