@@ -1,10 +1,14 @@
-An English translation patch for HuneX's PS2 game Love * Mahjong [SLPM-62248].
+An English translation patch for "Simple 2000 Ultimate Vol. 5: Love * Mahjong" [SLPM-62248] PS2 game developed by HuneX and published by D3Publisher.
 
 Patch file was created with Delta Patcher 3.1.5 and was tested with MD5: cd2add33801946aad2d61cdeff9e8368 copy of the game.
 
 Don't forget to make a backup of your game before patching!
 
-If you experience any issues with the patch or notice any mistakes you can create an issue on GitHub https://github.com/ScatterdBrain/Love-Mahjong-English-Translation-Patch
+Markings patch should be applied to already patched game (original -> 1.1 english patch -> markings).
 
-Check https://github.com/ScatterdBrain?tab=repositories for more patches.
+If you experience any issues with the patch or notice any mistakes you can create an issue on GitHub
+https://github.com/ScatterdBrain/Love-Mahjong-English-Translation-Patch
+or contact me on discord. 
+username: scatterdbrain
 
+Check https://github.com/ScatterdBrain?tab=repositories for other stuff.
