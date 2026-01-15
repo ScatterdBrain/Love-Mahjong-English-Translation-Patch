@@ -1,4 +1,4 @@
-An English translation patch for "Simple 2000 Ultimate Vol. 5: Love * Mahjong" [SLPM-62248] PS2 game developed by HuneX and published by D3Publisher.
+An English translation patch for "Simple 2000 Series Ultimate Vol. 5: Love * Mahjong" [SLPM-62248] PS2 game developed by HuneX and published by D3Publisher.
 
 Patch file was created with Delta Patcher 3.1.5 and was tested with MD5: cd2add33801946aad2d61cdeff9e8368 copy of the game.
 
@@ -14,5 +14,6 @@ or contact me on discord.
 username: scatterdbrain
 
 Check https://github.com/ScatterdBrain?tab=repositories for other stuff.
+
 
 
