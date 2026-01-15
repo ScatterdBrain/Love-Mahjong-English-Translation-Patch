@@ -7,8 +7,9 @@ Don't forget to make a backup of your game before patching!
 Markings patch should be applied to already patched game (original -> 1.1 english patch -> markings).
 
 If you experience any issues with the patch or notice any mistakes you can create an issue on GitHub
-https://github.com/ScatterdBrain/Love-Mahjong-English-Translation-Patch
+https://github.com/ScatterdBrain/Simple-2000-Ultimate-Vol.-5-Love-Mahjong-PS2-English-Translation-Patch
 or contact me on discord. 
 username: scatterdbrain
 
 Check https://github.com/ScatterdBrain?tab=repositories for other stuff.
+
