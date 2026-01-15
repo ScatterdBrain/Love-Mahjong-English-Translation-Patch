@@ -6,7 +6,7 @@ An English translation patch for "Simple 2000 Ultimate Vol. 5: Love * Mahjong" [
 ## Features:
 * All in-game text and UI/Menus were translated from Japanese to English.
 * Swapped × and ○ button inputs.
-* Includes additional patch that adds extra markings to the tiles (1-9 to number tiles, E S W N to wind tiles and D to dragon tiles). However, due to a low resolution of the original texture, it is only recommended to use it when playing on the emulator with at least 2x resolution scale.
+* Includes optional patch that adds extra markings to the tiles (1-9 to number tiles, E S W N to wind tiles and D to dragon tiles). However, due to a low resolution of the original texture, it is only recommended to use it when playing on the emulator with at least 2x resolution scale.
 
 ## Tools used:
 * [PCSX2](https://pcsx2.net/) - Debugging.
